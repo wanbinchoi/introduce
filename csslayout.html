@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csslayout</title>
+    <style>
+        /* 일반 흐름 (Normal Flow) */
+        .normal-flow {
+            background-color: #e0e0e0;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        /* 플로트 레이아웃 (Float Layout) */
+        .float-left {
+            float: left;
+            width: 30%;
+            background-color: #add8e6;
+            padding: 10px;
+        }
+        .float-right {
+            float: right;
+            width: 65%;
+            background-color: #90ee90;
+            padding: 10px;
+        }
+        /* 플렉스박스 레이아웃 (Flexbox Layout) */
+        .flex-container {
+            display: flex;
+            background-color: #f08080;
+        }
+        .flex-item {
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            flex: 1;
+            margin: 5px;
+        }
+
+        /* 그리드 레이아웃 (Grid Layout) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background-color: #ffeb3b;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /* 포지션 레이아웃 (Positioning Layout) */
+        .relative-box {
+            position: relative;
+            background-color: #ffc0cb;
+            padding: 20px;
+        }
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ffb6c1;
+            padding: 10px;
+        }
+        /* 플로트 클리어링 (Float Clearing) */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Normal Flow -->
+    <div class="normal-flow">
+        <p>normal flow</p>
+    </div>
+
+    <!-- Float Layout -->
+    <div class="clearfix">
+        <div class="float-left">float-layout1</div>
+        <div class="float-right">float-layout2</div>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex-container">
+        <div class="flex-item">flex1</div>
+        <div class="flex-item">flex2</div>
+        <div class="flex-item">flex3</div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grid-container">
+        <div class="grid-item">grid1</div>
+        <div class="grid-item">grid2</div>
+        <div class="grid-item">grid3</div>
+        <div class="grid-item">grid4</div>
+    </div>
+
+    <!-- Positioning Layout -->
+    <div class="relative-box">
+        positioning layout
+        <div class="absolute-box">box</div>
+    </div>
+
+</body>
+</html>
